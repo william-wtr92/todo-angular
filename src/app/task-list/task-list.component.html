@@ -1,0 +1,14 @@
+<div class="flex flex-col justify-center p-4">
+  <div class="flex justify-center mb-6">
+    <h1 class="text-3xl font-bold">Todo List</h1>
+  </div>
+  <div *ngFor="let task of taskList" class="flex justify-between border-2 rounded-2xl p-4 font-bold my-2">
+    <h2>{{task.name}}</h2>
+    <div class="flex justify-center items-center gap-6">
+      <a [href]="'/task/' + task.id">
+        <ng-icon name="heroPencilSquare" class="hover:cursor-pointer"></ng-icon>
+      </a>
+      <input type="checkbox" [checked]="task.validate"/>
+    </div>
+  </div>
+</div>
