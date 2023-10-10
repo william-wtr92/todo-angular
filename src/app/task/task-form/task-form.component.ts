@@ -47,6 +47,6 @@ export class TaskFormComponent implements OnInit {
     }
 
     onSubmit(): void {
-        this.router.navigate(['/task', this.task.id])
+        this.router.navigate(['/tasks'])
     }
 }

@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {ITask} from "../task";
-import {TaskList} from "../task-mock";
 import {TaskService} from "../task.service";
 
 @Component({

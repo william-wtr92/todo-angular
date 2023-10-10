@@ -11,16 +11,22 @@ import {TaskService} from "../task.service";
 export class TaskListComponent implements OnInit {
   public taskList: ITask[];
   public filterValue: boolean = false;
+  public taskLength: number;
+  public taskNotValidLength: number;
 
   constructor(private router: Router, private taskService: TaskService) {
   }
 
   ngOnInit(): void {
     this.taskList = this.taskService.getTaskList();
+    this.taskLength = this.taskList.length
+    this.taskNotValidLength = this.taskService.getFilteredTask().length
   }
 
   handleDelete(id: number): void{
     this.taskService.deleteTask(id);
+    this.taskLength = this.taskList.length
+    this.taskNotValidLength = this.taskService.getFilteredTask().length
   }
 
   getFilter(): void  {

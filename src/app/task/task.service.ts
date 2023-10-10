@@ -35,4 +35,8 @@ export class TaskService {
             TaskList.splice(index, 1);
         }
     }
+
+    addTask(task: ITask): void{
+      TaskList.push(task)
+    }
 }
