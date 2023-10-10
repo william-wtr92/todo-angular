@@ -1,4 +1,8 @@
 <div *ngIf="taskDetail" class="flex flex-col gap-4 border-2 border-black rounded-2xl p-4 w-1/4 justify-center items-center m-10">
   <h1>Name: {{taskDetail.name}}</h1>
   <p>Created at: {{taskDetail.created.toLocaleDateString("US-us")}}</p>
+  <p class="font-bold hover:cursor-pointer" (click)="goBack()">Go back</p>
+</div>
+<div *ngIf="!taskDetail" class="font-bold">
+  Il n'y pas de tâche associé à cette ID
 </div>

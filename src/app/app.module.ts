@@ -1,24 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { TaskListComponent } from './task-list/task-list.component';
-import { NgIconsModule } from "@ng-icons/core";
-import { heroPencilSquare } from "@ng-icons/heroicons/outline";
-import { TaskFormComponent } from './task-form/task-form.component'
 import { AppRoutingModule } from "./app-routing.module";
-import { TaskDetailComponent } from './task-detail/task-detail.component';
-
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {TaskModule} from "./task/task.module";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
-    TaskListComponent,
-    TaskFormComponent,
-    TaskDetailComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    NgIconsModule.withIcons({ heroPencilSquare }),
+    TaskModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

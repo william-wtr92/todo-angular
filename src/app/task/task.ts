@@ -4,4 +4,5 @@ export class ITask {
   created: Date;
   hidden: boolean;
   validate: boolean;
+  type: Array<string>;
 }

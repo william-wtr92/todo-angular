@@ -1,13 +1,10 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import {TaskListComponent} from "./task-list/task-list.component";
-import {TaskDetailComponent} from "./task-detail/task-detail.component";
-import {TaskFormComponent} from "./task-form/task-form.component";
+import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 
 const routes: Routes = [
-  {path:"", component: TaskListComponent},
-  {path:"task/:id", component: TaskDetailComponent},
-  {path:"add", component: TaskFormComponent},
+  {path:"", redirectTo: "tasks", pathMatch: "full"},
+  {path:"**", component: PageNotFoundComponent},
 ];
 
 @NgModule({
